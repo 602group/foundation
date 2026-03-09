@@ -71,7 +71,7 @@ export default async function ManageAuctions() {
                         </tr>
                     </thead>
                     <tbody>
-                        {auctions.map((auction) => (
+                        {auctions.map((auction: any) => (
                             <tr key={auction.id} style={{ cursor: "default" }}>
                                 <td style={{ ...tableCellStyle, fontWeight: "600" }}>{auction.title}</td>
                                 <td style={tableCellStyle}>

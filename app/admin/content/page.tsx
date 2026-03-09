@@ -23,6 +23,7 @@ async function createBlog(formData: FormData) {
             title: formData.get("title") as string,
             content: formData.get("content") as string,
             image: formData.get("imageUrl") as string || null,
+            authorId: "admin",
         }
     });
     revalidatePath('/');

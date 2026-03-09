@@ -60,7 +60,7 @@ export default async function AdminUserDetail({ params }: { params: Promise<{ id
                         display: "flex", alignItems: "center", justifyContent: "center",
                         fontSize: "22px", fontWeight: "900", flexShrink: 0,
                     }}>
-                        {(user.name || user.email)[0].toUpperCase()}
+                        {(user.name || user.email || "?")[0].toUpperCase()}
                     </div>
                     <div>
                         <h1 style={{ fontSize: "24px", fontWeight: "900", color: "#000", textTransform: "uppercase", letterSpacing: "-0.5px", margin: "0 0 4px 0" }}>
