@@ -109,7 +109,7 @@ export default async function ManageContent() {
                             </tr>
                         </thead>
                         <tbody>
-                            {events.map(e => (
+                            {events.map((e: any) => (
                                 <tr key={e.id}>
                                     <td style={{ ...tableCellStyle, fontWeight: "600" }}>{e.title}</td>
                                     <td style={{ ...tableCellStyle, color: "#555" }}>{e.location}</td>
@@ -147,7 +147,7 @@ export default async function ManageContent() {
                             </tr>
                         </thead>
                         <tbody>
-                            {blogs.map(b => (
+                            {blogs.map((b: any) => (
                                 <tr key={b.id}>
                                     <td style={{ ...tableCellStyle, fontWeight: "600" }}>{b.title}</td>
                                     <td style={{ ...tableCellStyle, color: "#888" }}>{b.createdAt.toLocaleDateString()}</td>
