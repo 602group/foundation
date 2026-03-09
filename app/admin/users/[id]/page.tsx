@@ -41,8 +41,8 @@ export default async function AdminUserDetail({ params }: { params: Promise<{ id
 
     if (!user) notFound();
 
-    const activeBids = user.bids.filter(b => b.auction.status === "ACTIVE");
-    const pastBids = user.bids.filter(b => b.auction.status !== "ACTIVE");
+    const activeBids = user.bids.filter((b: any) => b.auction.status === "ACTIVE");
+    const pastBids = user.bids.filter((b: any) => b.auction.status !== "ACTIVE");
 
     return (
         <div style={{ padding: "40px 48px" }}>
@@ -112,7 +112,7 @@ export default async function AdminUserDetail({ params }: { params: Promise<{ id
                             <th style={tableHeaderStyle}>Ends</th>
                         </tr></thead>
                         <tbody>
-                            {activeBids.map(bid => (
+                            {activeBids.map((bid: any) => (
                                 <tr key={bid.id}>
                                     <td style={{ ...tableCellStyle, fontWeight: "600" }}>{bid.auction.title}</td>
                                     <td style={tableCellStyle}>${bid.amount.toLocaleString()}</td>
@@ -143,7 +143,7 @@ export default async function AdminUserDetail({ params }: { params: Promise<{ id
                             <th style={tableHeaderStyle}>Date</th>
                         </tr></thead>
                         <tbody>
-                            {pastBids.map(bid => (
+                            {pastBids.map((bid: any) => (
                                 <tr key={bid.id}>
                                     <td style={{ ...tableCellStyle, fontWeight: "600" }}>{bid.auction.title}</td>
                                     <td style={tableCellStyle}>${bid.amount.toLocaleString()}</td>
